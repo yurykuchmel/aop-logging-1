@@ -27,8 +27,9 @@ public class LogViewerController {
   private LogViewerService logViewerService;
 
   @RequestMapping(method = RequestMethod.GET)
-  public String printWelcome() {
-    return "index";
+  public ModelAndView printWelcome() {
+    ModelAndView model = new ModelAndView("index");
+    return model;
   }
   
   @RequestMapping(value = "viewLog", method = RequestMethod.GET)
